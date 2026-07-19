@@ -54,26 +54,47 @@ A interface segue uma identidade visual **Kinetic Dark** — escura, refinada e 
 
 ## Stack técnica
 
-| Camada | Tecnologia |
-|--------|------------|
-| **Framework** | TanStack Start (React 19 + Vite 7) |
-| **Estilos** | Tailwind CSS v4, shadcn/ui |
-| **Backend** | TanStack Server Functions em ambiente serverless/edge |
-| **Banco de dados** | Postgres com Row Level Security (RLS) |
-| **Autenticação** | Supabase Auth (e-mail/senha + Google OAuth) |
-| **IA** | Google Gemini via Lovable AI Gateway |
-| **Exportação** | `@react-pdf/renderer`, `xlsx` |
-| **Gravação** | MediaRecorder API + Speech-to-Text |
-| **Gráficos** | Recharts |
-| **Validação** | Zod |
-| **Formulários** | React Hook Form |
+A arquitetura do **Smart Leading** foi planejada para ser moderna, extremamente rápida, escalável e segura. Abaixo estão listadas as principais tecnologias empregadas no desenvolvimento do MVP:
+
+### 💻 Frontend & Core
+* **React 19**: Ecossistema de última geração para construção de interfaces ricas com alto desempenho.
+* **TanStack Start & React Router**: Framework full-stack type-safe com suporte nativo a SSR (Server-Side Rendering), roteamento inteligente e carregamento de dados eficiente.
+* **Vite 8**: Ferramenta de build de última geração para feedback de desenvolvimento instantâneo e otimização de pacotes de produção.
+* **TypeScript**: Tipagem estática para robustez e segurança de código durante o desenvolvimento.
+
+### 🎨 Estilização & UI/UX (Kinetic Dark)
+* **Tailwind CSS v4**: Framework utilitário de CSS de alta performance, utilizando a nova engine otimizada.
+* **shadcn/ui**: Componentes de interface acessíveis e customizáveis, construídos sobre Radix UI e estruturados com CVA (Class Variance Authority).
+* **Lucide React**: Conjunto consistente de ícones vetoriais modernos.
+* **Embla Carousel**: Biblioteca robusta para transições e carrosséis fluidos.
+* **Vaul & Radix UI**: Componentes acessíveis para modais, gavetas (drawers) e menus suspensos.
+
+### ⚙️ Backend, Banco de Dados & Segurança
+* **PostgreSQL (Supabase)**: Banco de dados relacional de produção com suporte a consultas complexas e integridade referencial.
+* **Row Level Security (RLS)**: Regras de segurança implementadas diretamente no banco de dados para garantir que os dados de 1:1, PDIs e feedbacks sejam acessíveis apenas por usuários autorizados (liderados específicos, seus gestores diretos e RH).
+* **Supabase Auth**: Autenticação de usuários segura suportando login tradicional por e-mail/senha e autenticação social via Google OAuth.
+* **TanStack Server Functions**: Execução segura de operações de backend direto do frontend através de funções server-side integradas, sem a necessidade de expor endpoints REST expostos.
+
+### 🧠 Inteligência Artificial (IA)
+* **Google Gemini (via Lovable AI Gateway)**: Utilizado para estruturar e refinar feedbacks no padrão SBI (Situação, Comportamento, Impacto), calibrar o tom das mensagens, resumir gravações de 1:1s e realizar auditorias automáticas LGPD sanitizando dados sensíveis.
+* **Vercel AI SDK**: Integração simplificada para manipulação de fluxos de inteligência artificial de forma padronizada.
+
+### 📊 Relatórios, Mídia & Utilitários
+* **Recharts**: Biblioteca de gráficos interativos para exibição de métricas e analytics no Painel de RH.
+* **@react-pdf/renderer**: Geração dinâmica de documentos PDF em tempo de execução para download de relatórios de 1:1s, PDIs e feedbacks.
+* **xlsx (SheetJS)**: Biblioteca para exportar massas de dados de relatórios e analytics para o formato Excel (.xlsx).
+* **MediaRecorder API & Web Audio API**: Captura nativa de áudio direto do microfone do usuário no navegador para gravação de reuniões.
+* **Zod & React Hook Form**: Combinação poderosa para validação estática/em tempo de execução de esquemas de formulários de forma simples e segura.
+* **Sonner**: Notificações fluidas (toasts) para feedback em tempo real das ações do usuário.
 
 ---
 
 ## Demonstração
 
-Acesse a versão publicada e use a conta demo pré-provisionada:
+Acesse o projeto publicado na Vercel:
+👉 **[project-clear-it.vercel.app](https://project-clear-it.vercel.app/)**
 
+Use a conta demo pré-provisionada para testes:
 - **E-mail:** `admin@clearit.com`
 - **Senha:** `123456`
 
@@ -248,10 +269,10 @@ NODE_ENV=development
 
 ## Links
 
-- **Landing page:** `/`
-- **Manual do sistema:** `/manual`
-- **Apresentação pitch:** `/pitch`
-- **Login:** `/auth`
+- **URL de Produção:** [project-clear-it.vercel.app](https://project-clear-it.vercel.app/)
+- **Manual do sistema:** [project-clear-it.vercel.app/manual](https://project-clear-it.vercel.app/manual)
+- **Apresentação pitch:** [project-clear-it.vercel.app/pitch](https://project-clear-it.vercel.app/pitch)
+- **Login:** [project-clear-it.vercel.app/auth](https://project-clear-it.vercel.app/auth)
 
 ---
 
