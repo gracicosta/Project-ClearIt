@@ -1,285 +1,117 @@
-# Smart Leading · Assistente de 1:1 e Feedback
+# 🚀 Smart Leading · Assistente de 1:1 e Feedback
 
-MVP entregue pelo **Squad The Cure** para o desafio **ClearIT**.
+MVP desenvolvido pelo **Squad The Cure** para o desafio **ClearIT**.
 
-Plataforma web para líderes conduzirem reuniões 1:1, registrarem feedbacks estruturados no modelo SBI, manterem Planos de Desenvolvimento Individual (PDI) conectados ao Framework de Levels da ClearIT e apoiarem o RH com analytics — tudo com apoio de IA generativa e proteção LGPD embutida.
-
----
-
-## Sumário
-
-- [Visão geral](#visão-geral)
-- [Funcionalidades](#funcionalidades)
-- [Stack técnica](#stack-técnica)
-- [Demonstração](#demonstração)
-- [Rodando localmente](#rodando-localmente)
-- [Estrutura de pastas](#estrutura-de-pastas)
-- [Variáveis de ambiente](#variáveis-de-ambiente)
-- [Roadmap](#roadmap)
-- [Squad](#squad)
-- [Links](#links)
+O **Smart Leading** é uma plataforma web desenvolvida para auxiliar líderes a conduzirem reuniões 1:1 eficientes, registrarem feedbacks estruturados no modelo SBI, gerenciarem Planos de Desenvolvimento Individual (PDI) alinhados ao Framework de Levels da ClearIT e fornecerem relatórios analíticos para o RH — tudo isso com apoio de inteligência artificial generativa e conformidade nativa com a LGPD.
 
 ---
 
-## Visão geral
+## 🎯 Visão Geral
 
-O **Smart Leading** nasceu para transformar a rotina de liderança em algo mais leve, estruturado e seguro. Em vez de planilhas e anotações perdidas, o sistema oferece:
+O sistema simplifica a rotina de liderança e centraliza a gestão de pessoas, eliminando controles paralelos ou inseguros. Seus principais pilares são:
 
-- **1:1s guiadas** em 5 blocos obrigatórios.
-- **Feedback SBI** assistido por IA, com ajuste de tom.
-- **PDI conectado ao Framework de Levels** da ClearIT.
-- **Auditor LGPD** que sanitiza dados sensíveis antes da persistência.
-- **Central de Relatórios** com exportação em PDF e Excel.
-- **Gravação e transcrição** de reuniões direto no navegador.
-
-A interface segue uma identidade visual **Kinetic Dark** — escura, refinada e com microanimações — inspirada na linguagem da ClearIT.
+* **1:1s estruturadas:** Roteiro guiado em blocos lógicos focados em desenvolvimento e acordos.
+* **Feedback SBI (Situation-Behavior-Impact):** Apoio de IA para formulação de feedbacks claros com ajuste de tom.
+* **Conexão com PDI:** Metas conectadas diretamente às competências do Framework de Levels da ClearIT.
+* **Auditor LGPD:** Algoritmos de sanitização que removem ou protegem dados pessoais sensíveis antes do armazenamento.
+* **Painéis Analíticos (RH):** Cobertura de rituais, saúde dos feedbacks e incidências de segurança em tempo real.
 
 ---
 
-## Funcionalidades
+## ⚙️ Tecnologias Utilizadas
 
-| Código | Funcionalidade | Descrição |
-|--------|----------------|-----------|
-| F-01 | **1:1s estruturadas** | Wizard em 5 blocos: Check-in Humano, Pauta do Liderado, Status de Entregas, Desenvolvimento e Acordos. |
-| F-02 | **Feedback SBI** | Estruturação Situação / Comportamento / Impacto com sugestão de IA e medidor de tom. |
-| F-03 | **PDI conectado a Levels** | Até 3 objetivos por liderado, vinculados às 8 competências oficiais da ClearIT, com marcos verificáveis. |
-| F-04 | **Exportação PDF/Excel** | Relatórios de 1:1, feedback e PDI prontos para líderes e RH. |
-| F-05 | **Auditor LGPD** | Filtro regex + auditor de IA que classifica risco e registra incidentes sensíveis. |
-| F-06 | **Painel de RH** | Analytics multi-squad: cobertura de 1:1, saúde de feedbacks, PDIs ativos e incidentes LGPD. |
-| F-07 | **Feedbacks legados** | Importa PDFs antigos, extrai SBI e sugere próximos passos com IA. |
-| — | **Registrar Reunião** | Gravação no navegador com transcrição, resumo automático e pré-preenchimento dos wizards. |
-| — | **Central de Relatórios** | Painel único que consolida 1:1s, Feedbacks, PDIs e Gravações com busca, filtros e exportação. |
-
----
-
-## Stack técnica
-
-A arquitetura do **Smart Leading** foi planejada para ser moderna, extremamente rápida, escalável e segura. Abaixo estão listadas as principais tecnologias empregadas no desenvolvimento do MVP:
+A arquitetura do projeto foi desenhada para oferecer alta performance, segurança de dados e uma experiência visual moderna (Kinetic Dark).
 
 ### 💻 Frontend & Core
-* **React 19**: Ecossistema de última geração para construção de interfaces ricas com alto desempenho.
-* **TanStack Start & React Router**: Framework full-stack type-safe com suporte nativo a SSR (Server-Side Rendering), roteamento inteligente e carregamento de dados eficiente.
-* **Vite 8**: Ferramenta de build de última geração para feedback de desenvolvimento instantâneo e otimização de pacotes de produção.
-* **TypeScript**: Tipagem estática para robustez e segurança de código durante o desenvolvimento.
+* **React 19** · Construção de interfaces de usuário reativas de alto desempenho.
+* **TanStack Start & React Router** · Framework full-stack type-safe com suporte a SSR e Server Functions.
+* **Vite 8** · Bundler ultra-rápido para desenvolvimento otimizado.
+* **TypeScript** · Tipagem estática garantindo maior estabilidade no código.
 
-### 🎨 Estilização & UI/UX (Kinetic Dark)
-* **Tailwind CSS v4**: Framework utilitário de CSS de alta performance, utilizando a nova engine otimizada.
-* **shadcn/ui**: Componentes de interface acessíveis e customizáveis, construídos sobre Radix UI e estruturados com CVA (Class Variance Authority).
-* **Lucide React**: Conjunto consistente de ícones vetoriais modernos.
-* **Embla Carousel**: Biblioteca robusta para transições e carrosséis fluidos.
-* **Vaul & Radix UI**: Componentes acessíveis para modais, gavetas (drawers) e menus suspensos.
+### 🎨 Interface & UI/UX (Kinetic Dark)
+* **Tailwind CSS v4** · Estilização moderna através de uma engine utilitária veloz.
+* **shadcn/ui & Radix UI** · Componentes de interface totalmente acessíveis, responsivos e customizáveis.
+* **Lucide React** · Pacote de ícones vetoriais modernos.
+* **Embla Carousel & Vaul** · Transições fluidas de carrosséis e gavetas (drawers) deslizantes.
 
-### ⚙️ Backend, Banco de Dados & Segurança
-* **PostgreSQL (Supabase)**: Banco de dados relacional de produção com suporte a consultas complexas e integridade referencial.
-* **Row Level Security (RLS)**: Regras de segurança implementadas diretamente no banco de dados para garantir que os dados de 1:1, PDIs e feedbacks sejam acessíveis apenas por usuários autorizados (liderados específicos, seus gestores diretos e RH).
-* **Supabase Auth**: Autenticação de usuários segura suportando login tradicional por e-mail/senha e autenticação social via Google OAuth.
-* **TanStack Server Functions**: Execução segura de operações de backend direto do frontend através de funções server-side integradas, sem a necessidade de expor endpoints REST expostos.
+### 🔌 Backend, Banco & Segurança
+* **PostgreSQL (Supabase)** · Banco de dados relacional de produção com alta integridade.
+* **Row Level Security (RLS)** · Segurança nativa no banco para isolamento completo de dados por usuário/perfil.
+* **Supabase Auth** · Autenticação segura via e-mail/senha ou integração social (Google OAuth).
+* **TanStack Server Functions** · Comunicação segura e direta com o servidor a partir do cliente.
 
 ### 🧠 Inteligência Artificial (IA)
-* **Google Gemini (via Lovable AI Gateway)**: Utilizado para estruturar e refinar feedbacks no padrão SBI (Situação, Comportamento, Impacto), calibrar o tom das mensagens, resumir gravações de 1:1s e realizar auditorias automáticas LGPD sanitizando dados sensíveis.
-* **Vercel AI SDK**: Integração simplificada para manipulação de fluxos de inteligência artificial de forma padronizada.
+* **Google Gemini (via Lovable AI Gateway)** · Geração de insights de 1:1, modelagem SBI de feedbacks e moderação LGPD.
+* **Vercel AI SDK** · Integração padronizada com LLMs no ecossistema Javascript.
 
-### 📊 Relatórios, Mídia & Utilitários
-* **Recharts**: Biblioteca de gráficos interativos para exibição de métricas e analytics no Painel de RH.
-* **@react-pdf/renderer**: Geração dinâmica de documentos PDF em tempo de execução para download de relatórios de 1:1s, PDIs e feedbacks.
-* **xlsx (SheetJS)**: Biblioteca para exportar massas de dados de relatórios e analytics para o formato Excel (.xlsx).
-* **MediaRecorder API & Web Audio API**: Captura nativa de áudio direto do microfone do usuário no navegador para gravação de reuniões.
-* **Zod & React Hook Form**: Combinação poderosa para validação estática/em tempo de execução de esquemas de formulários de forma simples e segura.
-* **Sonner**: Notificações fluidas (toasts) para feedback em tempo real das ações do usuário.
+### 📊 Relatórios & Serviços adicionais
+* **Recharts** · Visualização dinâmica de métricas de engajamento no painel do RH.
+* **@react-pdf/renderer** · Geração em tempo real de documentos PDF para download.
+* **xlsx (SheetJS)** · Exportação de relatórios tabulares em formato Excel.
+* **MediaRecorder API** · Gravação local de áudio nativa no navegador para transcrição posterior.
 
 ---
 
-## Demonstração
+## 🌐 Demonstração & Links
 
-Acesse o projeto publicado na Vercel:
-👉 **[project-clear-it.vercel.app](https://project-clear-it.vercel.app/)**
+Acesse a plataforma em produção e utilize as credenciais de teste fornecidas:
 
-Use a conta demo pré-provisionada para testes:
-- **E-mail:** `admin@clearit.com`
-- **Senha:** `123456`
+* 🔗 **Link do Projeto:** [project-clear-it.vercel.app](https://project-clear-it.vercel.app/)
+* 📧 **E-mail:** `admin@clearit.com`
+* 🔑 **Senha:** `123456`
 
-A conta demo possui papel de **RH** e vem com massa de dados do squad The Cure, incluindo reuniões, feedbacks, PDIs e gravações de exemplo.
+*(A conta de teste possui perfil de RH e contém massa de dados previamente cadastrada para facilidade de avaliação).*
 
----
-
-## Rodando localmente
-
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) 18+
-- [Bun](https://bun.sh/) ou npm
-- Conta no Lovable Cloud (backend Supabase + AI Gateway)
-
-### Passo a passo
-
-1. **Clone o repositório:**
-
-   ```bash
-   git clone https://github.com/USUARIO/NOME-DO-REPO.git
-   cd NOME-DO-REPO
-   ```
-
-2. **Instale as dependências:**
-
-   ```bash
-   bun install
-   # ou
-   npm install
-   ```
-
-3. **Configure as variáveis de ambiente:**
-
-   ```bash
-   cp .env.example .env
-   ```
-
-   Preencha as variáveis listadas na seção [Variáveis de ambiente](#variáveis-de-ambiente).
-
-4. **Inicie o servidor de desenvolvimento:**
-
-   ```bash
-   bun dev
-   # ou
-   npm run dev
-   ```
-
-5. **Abra no navegador:**
-
-   ```
-   http://localhost:8080
-   ```
-
-### Scripts úteis
-
-| Comando | Descrição |
-|---------|-----------|
-| `bun dev` | Inicia o servidor de desenvolvimento |
-| `bun run build` | Gera o build de produção |
-| `bun run preview` | Pré-visualiza o build localmente |
-| `bun run lint` | Executa o ESLint |
-| `bun run format` | Formata o código com Prettier |
+### Atalhos Rápidos:
+* **Página Inicial:** [project-clear-it.vercel.app](https://project-clear-it.vercel.app/)
+* **Manual do Usuário:** [project-clear-it.vercel.app/manual](https://project-clear-it.vercel.app/manual)
+* **Apresentação Pitch:** [project-clear-it.vercel.app/pitch](https://project-clear-it.vercel.app/pitch)
+* **Login do Sistema:** [project-clear-it.vercel.app/auth](https://project-clear-it.vercel.app/auth)
 
 ---
 
-## Estrutura de pastas
+## 📥 Obtenção do Código
 
-```text
-.
-├── docs/                          # Documentação de negócio, prompts e sessões
-│   ├── business-context-lite.md
-│   ├── technical-context-lite.md
-│   ├── knowledge-base/
-│   └── sessions/
-├── src/
-│   ├── ai/                        # Persona, prompts e executor de IA
-│   │   ├── persona.ts
-│   │   ├── prompts/
-│   │   └── run-prompt.server.ts
-│   ├── components/                # Componentes React reutilizáveis
-│   │   ├── ui/                    # shadcn/ui
-│   │   ├── pdi/
-│   │   └── ...
-│   ├── hooks/                     # Hooks customizados
-│   ├── integrations/              # Supabase, Lovable Cloud, etc.
-│   ├── lib/                       # Funções utilitárias e server functions
-│   ├── routes/                    # Rotas do TanStack Start
-│   │   ├── __root.tsx
-│   │   ├── index.tsx              # Landing page
-│   │   ├── manual.tsx             # Manual público
-│   │   ├── pitch.tsx              # Apresentação pitch
-│   │   ├── auth.tsx               # Login/cadastro
-│   │   └── _authenticated/        # Área logada
-│   ├── router.tsx
-│   ├── server.ts
-│   ├── start.ts
-│   └── styles.css
-├── supabase/                      # Configurações do Supabase
-│   └── config.toml
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
+Para obter uma cópia local do código deste repositório, utilize o comando:
+
+```bash
+git clone https://github.com/USUARIO/NOME-DO-REPO.git
 ```
 
 ---
 
-## Variáveis de ambiente
-
-Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
-
-```env
-# Supabase (Lovable Cloud)
-VITE_SUPABASE_URL=https://<seu-projeto>.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_...
-SUPABASE_SERVICE_ROLE_KEY=sb_secret_...        # server-only
-
-# Lovable AI Gateway
-LOVABLE_API_KEY=lovable_...
-
-# Ambiente
-NODE_ENV=development
-```
-
-> ⚠️ **Nunca commite o arquivo `.env`.** Ele já está listado no `.gitignore`.
-
----
-
-## Roadmap
+## 📅 Roadmap
 
 ### Entregue no MVP
+- [x] Autenticação segura e controle de acesso (Líder / RH)
+- [x] Wizard de 1:1 estruturado em 5 blocos principais
+- [x] Assistência SBI assistida por IA com modulação de tom
+- [x] PDI integrado ao Framework de Competências da ClearIT
+- [x] Auditor LGPD automatizado (regex + IA)
+- [x] Painel de RH com analytics de engajamento e segurança
+- [x] Importação de feedbacks antigos em formato PDF
+- [x] Gravação integrada e transcrição automática de reuniões
+- [x] Central de exportação de dados para PDF e Excel
 
-- [x] Autenticação com e-mail/senha e Google OAuth
-- [x] Perfis de Gestor e RH
-- [x] Gestão de liderados
-- [x] Wizard de 1:1 em 5 blocos
-- [x] Feedback SBI com sugestão de IA
-- [x] PDI conectado ao Framework de Levels
-- [x] Auditor LGPD com classificação de risco
-- [x] Painel de RH com analytics
-- [x] Importação de feedbacks legados (PDF)
-- [x] Gravação e transcrição de reuniões
-- [x] Central de Relatórios com exportação PDF/Excel
-
-### Próximos passos sugeridos
-
-- [ ] Suíte automatizada de testes de prompts
-- [ ] Notificações por e-mail para 1:1s agendadas e action items em atraso
-- [ ] Integração com calendário (Google/Outlook)
-- [ ] Modo offline para gravação em áreas com conectividade instável
-- [ ] App mobile / PWA
-- [ ] Biblioteca de perguntas por competência e nível
-- [ ] Comparativos temporais de tom e evolução de PDI
-- [ ] Fluxo de calibração 360°
-- [ ] Alertas proativos da IA
-- [ ] SSO corporativo (Microsoft Entra ID)
+### Próximos Passos
+- [ ] Integração com calendários corporativos (Google Calendar e Outlook)
+- [ ] Suíte automatizada de testes e qualidade para prompts de IA
+- [ ] Notificações por e-mail e push para metas de PDI ou rituais pendentes
+- [ ] Modo offline para gravação em trânsito
+- [ ] Aplicação Mobile Nativa ou suporte a PWA completo
 
 ---
 
-## Squad
+## 👥 Squad The Cure
 
-**The Cure**
-
-- Breno Vilaça
-- Graciele Costa
-- Letícia Gonçalves
-- Henrique Ferreira
-- Vitória Silva
+* Breno Vilaça
+* Graciele Costa
+* Letícia Gonçalves
+* Henrique Ferreira
+* Vitória Silva
 
 ---
 
-## Links
+## 📄 Licença
 
-- **URL de Produção:** [project-clear-it.vercel.app](https://project-clear-it.vercel.app/)
-- **Manual do sistema:** [project-clear-it.vercel.app/manual](https://project-clear-it.vercel.app/manual)
-- **Apresentação pitch:** [project-clear-it.vercel.app/pitch](https://project-clear-it.vercel.app/pitch)
-- **Login:** [project-clear-it.vercel.app/auth](https://project-clear-it.vercel.app/auth)
-
----
-
-## Licença
-
-Este projeto foi desenvolvido como MVP acadêmico/profissional para o desafio ClearIT. Uso interno e apresentações são permitidos; redistribuição comercial requer autorização dos autores.
-
----
-
-*Smart Leading · MVP entregue em julho de 2026 · Desafio ClearIT · Squad The Cure*
+Este projeto foi desenvolvido como MVP corporativo/educacional para o desafio ClearIT. O uso do material é restrito a fins de avaliação e apresentação institucional.
